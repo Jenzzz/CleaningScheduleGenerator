@@ -48,7 +48,7 @@ map<string, string> ReadIniFile::ReadRoomNumbers()
 	roomNumbers["258"] = reader.Get("RoomNumbers", "258", "Name undefined");
 	roomNumbers["259"] = reader.Get("RoomNumbers", "259", "Name undefined");
 	roomNumbers["260"] = reader.Get("RoomNumbers", "260", "Name undefined");
-	
+
 	return roomNumbers;
 }
 

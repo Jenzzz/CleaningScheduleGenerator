@@ -2,13 +2,34 @@
 <ui version="4.0">
  <class>settings</class>
  <widget class="QWidget" name="settings">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>300</height>
+    <height>700</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
   </property>
   <property name="windowTitle">
    <string>settings</string>
@@ -19,7 +40,7 @@
      <x>40</x>
      <y>10</y>
      <width>321</width>
-     <height>281</height>
+     <height>681</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -28,6 +49,9 @@
       <property name="bottomMargin">
        <number>0</number>
       </property>
+      <item>
+       <layout class="QGridLayout" name="gridLayout"/>
+      </item>
      </layout>
     </item>
     <item>
@@ -36,14 +60,14 @@
        <number>20</number>
       </property>
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="updateButton">
         <property name="text">
          <string>Update</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="cancelButton">
         <property name="text">
          <string>Cancel</string>
         </property>

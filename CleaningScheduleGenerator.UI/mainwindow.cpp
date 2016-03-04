@@ -12,6 +12,7 @@
 #include "WritePdf.h"
 #include "dateHelper.h"
 #include "settings.h"
+#include "RoomRepository.h"
 
 using namespace std;
 
@@ -30,14 +31,19 @@ MainWindow::MainWindow(QMainWindow  *parent) : QMainWindow(parent)
 
 void MainWindow::handleSettings()
 {
-	
+	vector<Room*> rooms = RoomRepository().GetAll();
+		
+	settings* set = new settings(rooms);
+
+	//this->setEnabled(false);
+	set->show();
 }
 
 void MainWindow::DataBind()
 {
 	unsigned int weekAmount = 8;
 
-	time_t t = time(0);   // get time now
+	time_t t = time(0);
 	tm startDate;
 	localtime_s(&startDate, &t);
 	startDate.tm_year;
@@ -68,10 +74,12 @@ void MainWindow::handleButton()
 	WritePdf* writePdf = new WritePdf();
 	writePdf->WriteToFile(cleaningScheduleMap, fileName);
 
-	QMessageBox msgBox;
+	//ui.statusbar->showMessage("Schedule generated succesfully");
+
+	/*QMessageBox msgBox;
 	msgBox.setWindowTitle("Hello");
 	msgBox.setText("You Clicked " + ((QPushButton*)sender())->text());
-	msgBox.exec();
+	msgBox.exec();*/
 }
 
 MainWindow::~MainWindow()

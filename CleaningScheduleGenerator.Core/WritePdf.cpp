@@ -1,6 +1,8 @@
 #include "WritePdf.h"
 
 #include <ctime>
+#include <iostream>
+#include <fstream>
 
 using namespace std;
 using namespace jag;
@@ -12,6 +14,12 @@ WritePdf::WritePdf()
 
 void WritePdf::WriteToFile(vector<WeekSchedule> &schedule, string &fileName)
 {
+	if (ifstream(fileName))
+	{
+		cout << "Filename " << fileName << "already exists" << endl;
+		return;
+	}
+
 	pdf::Document doc(pdf::create_file(fileName.append(".pdf").c_str()));
 	doc.page_start(a4Paper_x, a4Paper_y);
 	pdf::Canvas canvas = doc.page().canvas();
