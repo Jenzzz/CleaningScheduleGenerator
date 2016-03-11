@@ -11,6 +11,7 @@ class Room
 public:
 	Room();
 	Room(int roomNumber, Person &habitant);
+	Room(int roomNumber, Person &habitant, Person &overseer);
 	int RoomNumber;
 	Person* Habitant;
 	Person* Overseer;

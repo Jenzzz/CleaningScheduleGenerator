@@ -43,6 +43,12 @@
     <Filter Include="Header Files\Helper">
       <UniqueIdentifier>{7411ae18-5411-4904-8a27-f80fb459f7a2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Data\Base">
+      <UniqueIdentifier>{d26c2b63-d3ff-460e-8f78-9ec5f570bd67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data\Base">
+      <UniqueIdentifier>{d5229f68-173f-49a6-a8ac-3f62e36bceea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -83,6 +89,12 @@
     </ClCompile>
     <ClCompile Include="inih\ini.c">
       <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="DatabaseBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PersonRepository.cpp">
+      <Filter>Source Files\Data\Repository</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +139,15 @@
     </ClInclude>
     <ClInclude Include="inih\ini.h">
       <Filter>Header Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="DatabaseBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PersonRepository.h">
+      <Filter>Header Files\Data\Repository</Filter>
+    </ClInclude>
+    <ClInclude Include="BooleanHelper.h">
+      <Filter>Header Files\Helper</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

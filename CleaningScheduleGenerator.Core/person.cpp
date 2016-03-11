@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Person::Person(string name, bool isNestor) : Name(name), IsNestor(isNestor)
+Person::Person(int id, string name, bool isNestor) : Id(id), Name(name), IsNestor(isNestor)
 {
 }
 

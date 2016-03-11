@@ -8,6 +8,10 @@ Room::Room(int roomNumber, Person &habitant) : RoomNumber(roomNumber), Habitant(
 {
 }
 
+Room::Room(int roomNumber, Person &habitant, Person &overseer) : RoomNumber(roomNumber), Habitant(&habitant), Overseer(&overseer)
+{
+}
+
 
 Room::~Room()
 {

@@ -79,7 +79,7 @@ void WritePdf::DrawGrid(Document &doc, vector<WeekSchedule> &schedule, Canvas &c
 	for each (SingleTaskRoom singleTaskRoom in singleTaskRooms)
 	{
 		// (a4Paper_y - margin_top) - widthItemY * (singleTaskRoom.task->Id)
-		canvas.text(margin_left + padding_left, a4Paper_y - (margin_top + padding_top + widthItemY * (singleTaskRoom.task->Id + 1)), singleTaskRoom.task->Name.c_str());
+		canvas.text(margin_left + padding_left, a4Paper_y - (margin_top + padding_top + widthItemY * (singleTaskRoom.task->Id)), singleTaskRoom.task->Name.c_str());
 	}
 
 	int sizeCheckbox = 10;
@@ -100,17 +100,23 @@ void WritePdf::DrawGrid(Document &doc, vector<WeekSchedule> &schedule, Canvas &c
 
 		for each (SingleTaskRoom singleTaskRoom in weekSchedule.TasksForRooms)
 		{
-			canvas.text(margin_left + padding_left + tempWidthItemX, a4Paper_y - (margin_top + 13 + widthItemY * (singleTaskRoom.task->Id + 1)), singleTaskRoom.room->Habitant->Name.c_str());
-			canvas.text(margin_left + padding_left + tempWidthItemX, a4Paper_y - (margin_top + 13 + 15 + widthItemY * (singleTaskRoom.task->Id + 1)), singleTaskRoom.room->Overseer->Name.c_str());
+			canvas.text(margin_left + padding_left + tempWidthItemX, a4Paper_y - (margin_top + 13 + widthItemY * (singleTaskRoom.task->Id)), singleTaskRoom.room->Habitant->Name.c_str());
+			canvas.text(margin_left + padding_left + tempWidthItemX, a4Paper_y - (margin_top + 13 + 15 + widthItemY * (singleTaskRoom.task->Id)), singleTaskRoom.room->Overseer->Name.c_str());
 
-			canvas.rectangle(margin_left + tempWidthItemX + widthItemX - sizeCheckbox - padding_right, a4Paper_y - (margin_top + 15 + widthItemY * (singleTaskRoom.task->Id + 1)), sizeCheckbox, sizeCheckbox);
+			canvas.rectangle(margin_left + tempWidthItemX + widthItemX - sizeCheckbox - padding_right, a4Paper_y - (margin_top + 15 + widthItemY * (singleTaskRoom.task->Id)), sizeCheckbox, sizeCheckbox);
 			canvas.path_paint("s");
 
-			canvas.rectangle(margin_left + tempWidthItemX + widthItemX - sizeCheckbox - padding_right, a4Paper_y - (margin_top + 15 + 15 + widthItemY * (singleTaskRoom.task->Id + 1)), sizeCheckbox, sizeCheckbox);
+			canvas.rectangle(margin_left + tempWidthItemX + widthItemX - sizeCheckbox - padding_right, a4Paper_y - (margin_top + 15 + 15 + widthItemY * (singleTaskRoom.task->Id)), sizeCheckbox, sizeCheckbox);
 			canvas.path_paint("s");
 
-			canvas.rectangle(margin_left + tempWidthItemX + widthItemX - sizeCheckbox - padding_right, a4Paper_y - (margin_top + 15 + 15 + 15 + widthItemY * (singleTaskRoom.task->Id + 1)), sizeCheckbox, sizeCheckbox);
+
+			canvas.move_to(margin_left + padding_left + tempWidthItemX, a4Paper_y - (margin_top + 13 + 15 + 18 + widthItemY * (singleTaskRoom.task->Id)));
+			canvas.line_to(margin_left + tempWidthItemX + widthItemX - sizeCheckbox - padding_right, a4Paper_y - (margin_top + 13 + 15 + 18 + widthItemY * (singleTaskRoom.task->Id)));
 			canvas.path_paint("s");
+
+			//				   margin_left + padding_left + tempWidthItemX,                              a4Paper_y - (margin_top + 13 + 15 + 15 + widthItemY * (singleTaskRoom.task->Id))
+			/*canvas.rectangle(margin_left + tempWidthItemX + widthItemX - sizeCheckbox - padding_right, a4Paper_y - (margin_top + 15 + 15 + 15 + widthItemY * (singleTaskRoom.task->Id)), sizeCheckbox, sizeCheckbox);
+			canvas.path_paint("s");*/
 		}
 
 		tempWidthItemX += widthItemX;

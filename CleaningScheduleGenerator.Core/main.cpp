@@ -7,28 +7,11 @@
 #include "WritePdf.h"
 
 #include <stdio.h>
-//#include <sqlite3.h> 
 
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-	/*sqlite3 *db;
-	char *zErrMsg = 0;
-	int rc;
-
-	rc = sqlite3_open("cleaningschedule.db", &db);
-
-	if (rc) {
-		fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
-		exit(0);
-	}
-	else {
-		fprintf(stderr, "Opened database successfully\n");
-	}
-	sqlite3_close(db);*/
-
-
 	time_t t = time(0);   // get time now
 	tm dateTime;
 	localtime_s(&dateTime, &t);
@@ -58,7 +41,7 @@ int main(int argc, char* argv[])
 //	}
 
 	//ReadIniFile("../CleaningScheduleGenerator/config.ini");
-
+	
 	// generate schedule
 	CleaningSchedule* cleaningSchedule = new CleaningSchedule();
 	vector<WeekSchedule> cleaningScheduleMap = cleaningSchedule->Generate(dateTime);

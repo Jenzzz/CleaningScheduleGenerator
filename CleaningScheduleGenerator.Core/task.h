@@ -2,13 +2,14 @@
 #define __TASK_H__
 
 #include <ostream>
+#include <string>
 
 using namespace std;
 
 class Task
 {
 public:
-	Task(int id, string name);
+	Task(int id, string name, string descrption);
 	int Id;
 	string Name;
 	string Description;

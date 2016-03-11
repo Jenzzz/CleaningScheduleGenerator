@@ -2,13 +2,15 @@
 #define __PERSON_H__
 
 #include <ostream>
+#include <string>
 
 using namespace std;
 
 class Person
 {
 public:
-	Person(string name, bool IsNestor = false);
+	Person(int id, string name, bool IsNestor = false);
+	int Id;
 	string Name;
 	bool IsNestor;
 	~Person();

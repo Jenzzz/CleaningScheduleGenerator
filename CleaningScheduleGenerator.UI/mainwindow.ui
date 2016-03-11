@@ -99,6 +99,7 @@
     <property name="title">
      <string>Settings</string>
     </property>
+    <addaction name="actionAdd_Room"/>
     <addaction name="actionPreferences"/>
    </widget>
    <addaction name="menuFile"/>
@@ -113,6 +114,11 @@
   <action name="actionPreferences">
    <property name="text">
     <string>Preferences</string>
+   </property>
+  </action>
+  <action name="actionAdd_Room">
+   <property name="text">
+    <string>Add Room</string>
    </property>
   </action>
  </widget>
