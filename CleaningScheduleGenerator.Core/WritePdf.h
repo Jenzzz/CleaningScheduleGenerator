@@ -1,5 +1,8 @@
-#ifndef __WRITEPDF_H__
-#define __WRITEPDF_H__
+#ifdef COMPILE_MYLIBRARY
+#define MYLIBRARY_EXPORT __declspec(dllexport)
+#else
+#define MYLIBRARY_EXPORT __declspec(dllimport)
+#endif
 
 #include <vector>
 #include <map>
@@ -12,7 +15,7 @@ using namespace std;
 using namespace jag;
 using namespace jag::pdf;
 
-class WritePdf
+class MYLIBRARY_EXPORT WritePdf
 {
 public:
 	WritePdf();
@@ -23,5 +26,3 @@ private:
 	const double a4Paper_x = 597.6;
 	const double a4Paper_y = 848.68;
 };
-
-#endif

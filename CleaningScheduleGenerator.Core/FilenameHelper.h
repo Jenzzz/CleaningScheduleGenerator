@@ -1,5 +1,8 @@
-#ifndef __FILENAMEHELPER_H__
-#define __FILENAMEHELPER_H__
+#ifdef COMPILE_MYLIBRARY
+#define MYLIBRARY_EXPORT __declspec(dllexport)
+#else
+#define MYLIBRARY_EXPORT __declspec(dllimport)
+#endif
 
 #include <iostream>
 #include <ctime>
@@ -8,7 +11,7 @@
 
 using namespace std;
 
-string ConstructFilename(tm &dateTime)
+string static ConstructFilename(tm &dateTime)
 {
 	int weekNumber = GetWeek(dateTime.tm_mday, dateTime.tm_mon + 1, dateTime.tm_year);
 	
@@ -18,7 +21,5 @@ string ConstructFilename(tm &dateTime)
 	//sprintf_s(buffer, "Schoonmaakrooster_%d_%d_%d", weekNumber, weekNumber + 8, dateTime.tm_year); // Change to year
 	sprintf_s(buffer, "Schoonmaakrooster_%d_%d_%d_%d_%d", weekNumber, weekNumber + 8, dateTime.tm_year, dateTime.tm_mday, dateTime.tm_min);
 
-	return buffer;
+	return string(buffer);
 }
-
-#endif

@@ -2,9 +2,7 @@
 #include <string>
 #include <vector>
 
-#include "FilenameHelper.h"
 #include "CleaningSchedule.h"
-#include "WritePdf.h"
 
 #include <stdio.h>
 
@@ -43,16 +41,12 @@ int main(int argc, char* argv[])
 	//ReadIniFile("../CleaningScheduleGenerator/config.ini");
 	
 	// generate schedule
-	CleaningSchedule* cleaningSchedule = new CleaningSchedule();
-	vector<WeekSchedule> cleaningScheduleMap = cleaningSchedule->Generate(dateTime);
+//	CleaningSchedule* cleaningSchedule = new CleaningSchedule();
+//	vector<WeekSchedule> cleaningScheduleMap = cleaningSchedule->Generate(dateTime);
 
 	// save schedule
 	// TODO
 	
-	string fileName = ConstructFilename(dateTime);
-
-	WritePdf* writePdf = new WritePdf();
-	writePdf->WriteToFile(cleaningScheduleMap, fileName);
 		
 	//time_t t = time(0);   // get time now
 	//tm tm;

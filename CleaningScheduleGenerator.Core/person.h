@@ -9,6 +9,7 @@ using namespace std;
 class Person
 {
 public:
+	Person();
 	Person(int id, string name, bool IsNestor = false);
 	int Id;
 	string Name;

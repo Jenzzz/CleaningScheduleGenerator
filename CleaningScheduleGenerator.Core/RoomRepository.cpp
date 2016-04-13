@@ -3,7 +3,6 @@
 #include <sstream>
 #include <algorithm>
 
-#include "readIniFile.h"
 #include "DatabaseBase.h"
 #include "BooleanHelper.h"
 
@@ -61,6 +60,8 @@ void RoomRepository::ConvertToRoom(int roomNumber, Person &person, Person &overs
 
 vector<Room*> RoomRepository::GetAll()
 {
+	rooms.clear();
+
 	sqlite3 *db;
 	char *zErrMsg = 0;
 	int rc;

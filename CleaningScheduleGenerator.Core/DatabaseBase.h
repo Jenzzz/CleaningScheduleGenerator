@@ -1,5 +1,8 @@
-#ifndef DATABASEBASE_H
-#define DATABASEBASE_H
+#ifdef COMPILE_MYLIBRARY
+#define MYLIBRARY_EXPORT __declspec(dllexport)
+#else
+#define MYLIBRARY_EXPORT __declspec(dllimport)
+#endif
 
 #include <string>
 #include <functional>
@@ -8,7 +11,7 @@
 
 using namespace std;
 
-class DatabaseBase
+class MYLIBRARY_EXPORT DatabaseBase
 {
 public:
 	DatabaseBase();
@@ -18,6 +21,4 @@ public:
 private:
 	//static int callback(void *data, int argc, char **argv, char **azColName);
 };
-
-#endif // !DATABASEBASE_H
 

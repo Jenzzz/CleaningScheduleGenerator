@@ -1,10 +1,5 @@
 #include "CleaningSchedule.h"
 
-#include "RoomRepository.h"
-#include "TaskRepository.h"
-#include "dateHelper.h"
-
-#include <time.h>
 #include <iostream>
 
 using namespace std;
@@ -13,15 +8,18 @@ CleaningSchedule::CleaningSchedule()
 {
 }
 
-vector<WeekSchedule> CleaningSchedule::Generate(tm &startDate, unsigned int weekAmount)
+void CleaningSchedule::Generate(tm &startDate, unsigned int weekAmount)
 {
+	this->startDate = startDate;
 	RoomRepository* roomRepository = new RoomRepository();
 	vector<Room*> rooms = roomRepository->GetAll();
 
 	TaskRepository* taskRepository = new TaskRepository();
 	vector<Task*> tasks = taskRepository->GetAll();
 
-	vector<WeekSchedule> generatedSchedule;
+	cleaningScheduleMap = new vector<WeekSchedule>();
+
+	//vector<WeekSchedule> generatedSchedule;
 	// Check if day is Thursday
 	if (startDate.tm_wday == 0)
 		startDate.tm_mday -= 3;
@@ -50,10 +48,18 @@ vector<WeekSchedule> CleaningSchedule::Generate(tm &startDate, unsigned int week
 		WeekSchedule weekSchedule = GenerateWeekSchedule(dateTimes.at(i), rooms, tasks);
 		weekSchedule.DateTime = dateTimes.at(i);
 
-		generatedSchedule.push_back(weekSchedule);
+		cleaningScheduleMap->push_back(weekSchedule);
 	}
 
-	return generatedSchedule;
+	//return generatedSchedule;
+}
+
+void CleaningSchedule::Save()
+{
+	string fileName = ConstructFilename(startDate);
+
+	WritePdf* writePdf = new WritePdf();
+	writePdf->WriteToFile(*cleaningScheduleMap, fileName);
 }
 
 

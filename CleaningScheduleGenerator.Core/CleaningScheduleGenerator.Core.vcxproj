@@ -26,7 +26,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
@@ -104,13 +104,13 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\CleaningScheduleGenerator.Core\jagpdf-1.4.0.win32.x86.c_cpp\include\;$(SolutionDir)\CleaningScheduleGenerator.Core\jagpdf-1.4.0.win32.x86.c_cpp\include\jagpdf\;$(SolutionDir)\CleaningScheduleGenerator.Core\sqlite\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\CleaningScheduleGenerator.Core\jagpdf-1.4.0.win32.x86.c_cpp\include\;$(SolutionDir)\CleaningScheduleGenerator.Core\jagpdf-1.4.0.win32.x86.c_cpp\include\jagpdf\;$(SolutionDir)\CleaningScheduleGenerator.Core\jagpdf-1.4.0.win32.x86.c_cpp\lib\;$(SolutionDir)\CleaningScheduleGenerator.Core\sqlite\;C:\sqlite;$(SolutionDir)\Release\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>None</DebugInformationFormat>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>jagpdf.lib;sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>jagpdf.lib;sqlite3.lib;CleaningScheduleGenerator.Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -149,11 +149,8 @@
     <ClInclude Include="DatabaseBase.h" />
     <ClInclude Include="dateHelper.h" />
     <ClInclude Include="FilenameHelper.h" />
-    <ClInclude Include="inih\cpp\INIReader.h" />
-    <ClInclude Include="inih\ini.h" />
     <ClInclude Include="person.h" />
     <ClInclude Include="PersonRepository.h" />
-    <ClInclude Include="readIniFile.h" />
     <ClInclude Include="room.h" />
     <ClInclude Include="RoomRepository.h" />
     <ClInclude Include="SingleTaskRoom.h" />

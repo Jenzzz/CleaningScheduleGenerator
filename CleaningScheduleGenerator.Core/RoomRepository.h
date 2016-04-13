@@ -1,5 +1,8 @@
-#ifndef __ROOMREPOSITORY_H__
-#define __ROOMREPOSITORY_H__
+#ifdef COMPILE_MYLIBRARY
+#define MYLIBRARY_EXPORT __declspec(dllexport)
+#else
+#define MYLIBRARY_EXPORT __declspec(dllimport)
+#endif
 
 #include <vector>
 #include "room.h"
@@ -7,7 +10,7 @@
 
 using namespace std;
 
-class RoomRepository : DatabaseBase
+class MYLIBRARY_EXPORT RoomRepository : DatabaseBase
 {
 public:
 	RoomRepository();
@@ -22,7 +25,3 @@ public:
 private:
 	
 };
-
-
-
-#endif __ROOMREPOSITORY_H__

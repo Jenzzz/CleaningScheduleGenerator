@@ -11,7 +11,7 @@
 #include "CleaningSchedule.h"
 #include "WritePdf.h"
 #include "dateHelper.h"
-#include "settings.h"
+
 #include "RoomRepository.h"
 
 using namespace std;
@@ -27,15 +27,13 @@ MainWindow::MainWindow(QMainWindow  *parent) : QMainWindow(parent)
 	connect(ui.pushButton, SIGNAL(released()), this, SLOT(handleButton()));
 	connect(ui.actionExit, SIGNAL(triggered()), this, SLOT(close()));
 	connect(ui.actionPreferences, SIGNAL(triggered()), this, SLOT(handleSettings()));
+
+	rooms = RoomRepository().GetAll();
+	set = new settings(rooms);
 }
 
 void MainWindow::handleSettings()
-{
-	vector<Room*> rooms = RoomRepository().GetAll();
-		
-	settings* set = new settings(rooms);
-
-	//this->setEnabled(false);
+{	
 	set->show();
 }
 
@@ -67,12 +65,13 @@ void MainWindow::handleButton()
 	
 	// generate schedule
 	CleaningSchedule* cleaningSchedule = new CleaningSchedule();
-	vector<WeekSchedule> cleaningScheduleMap = cleaningSchedule->Generate(dateTime);
+	cleaningSchedule->Generate(dateTime);
+	//vector<WeekSchedule> cleaningScheduleMap = cleaningSchedule->Generate(dateTime);
 
-	string fileName = ConstructFilename(dateTime);
+	//string fileName = ConstructFilename(dateTime);
 
-	WritePdf* writePdf = new WritePdf();
-	writePdf->WriteToFile(cleaningScheduleMap, fileName);
+	//WritePdf* writePdf = new WritePdf();
+	//writePdf->WriteToFile(cleaningScheduleMap, fileName);
 
 	//ui.statusbar->showMessage("Schedule generated succesfully");
 
