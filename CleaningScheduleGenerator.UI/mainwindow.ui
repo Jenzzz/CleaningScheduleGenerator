@@ -86,29 +86,61 @@
      <x>0</x>
      <y>0</y>
      <width>460</width>
-     <height>21</height>
+     <height>17</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionNew_Schedule"/>
+    <addaction name="actionOpen_Schedule"/>
+    <addaction name="actionSave_as_pdf"/>
+    <addaction name="actionPrint"/>
     <addaction name="actionExit"/>
+    <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menuSettings">
     <property name="title">
      <string>Settings</string>
     </property>
-    <addaction name="actionAdd_Room"/>
     <addaction name="actionPreferences"/>
    </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout_Cleaning_schedule_generator"/>
+   </widget>
+   <widget class="QMenu" name="menuSchedule">
+    <property name="title">
+     <string>Schedule</string>
+    </property>
+    <widget class="QMenu" name="menuRoom">
+     <property name="title">
+      <string>Rooms</string>
+     </property>
+     <addaction name="actionAdd_Room"/>
+     <addaction name="actionRemove_Room"/>
+    </widget>
+    <addaction name="actionGenerate"/>
+    <addaction name="separator"/>
+    <addaction name="menuRoom"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuSchedule"/>
    <addaction name="menuSettings"/>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionExit">
    <property name="text">
     <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
    </property>
   </action>
   <action name="actionPreferences">
@@ -116,9 +148,61 @@
     <string>Preferences</string>
    </property>
   </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+  </action>
+  <action name="actionAbout_Cleaning_schedule_generator">
+   <property name="text">
+    <string>About CSG</string>
+   </property>
+   <property name="toolTip">
+    <string>About Cleaning Schedule Generator</string>
+   </property>
+  </action>
+  <action name="actionGenerate">
+   <property name="text">
+    <string>Generate</string>
+   </property>
+  </action>
+  <action name="actionRemove_Room">
+   <property name="text">
+    <string>Remove Room</string>
+   </property>
+  </action>
   <action name="actionAdd_Room">
    <property name="text">
     <string>Add Room</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="text">
+    <string>Print...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionSave_as_pdf">
+   <property name="text">
+    <string>Save as .pdf</string>
+   </property>
+  </action>
+  <action name="actionNew_Schedule">
+   <property name="text">
+    <string>New Schedule</string>
+   </property>
+  </action>
+  <action name="actionOpen_Schedule">
+   <property name="text">
+    <string>Open Schedule</string>
    </property>
   </action>
  </widget>

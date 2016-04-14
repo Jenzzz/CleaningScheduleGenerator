@@ -3,6 +3,7 @@
 #include <ctime>
 #include <iostream>
 #include <fstream>
+#include <QPdfWriter>
 
 using namespace std;
 using namespace jag;
@@ -10,6 +11,25 @@ using namespace jag::pdf;
 
 WritePdf::WritePdf()
 {
+	const int dpi = 72;
+
+//	QPageLayout* newPageLayout = new QPageLayout();
+//	newPageLayout.
+
+	QPdfWriter writer(a_strFileName);
+	writer.setPageSize(QPagedPaintDevice::A4);
+//	writer.setPageLayout();
+	writer.setOrientation(QPageLayout::Orientation.Portrait);
+	writer.setCreator("Jens");
+	writer.setResolutio(dpi);
+	writer.setTitle("Schoonmaakrooster");
+
+	QPainter painter(&writer);
+	
+	painter.setPen(Qt::red);
+	painter.drawText(0, 0, "THIS IS MY RED PDF TEXT..");
+	
+	painter.end();
 }
 
 void WritePdf::WriteToFile(vector<WeekSchedule> &schedule, string &fileName)
