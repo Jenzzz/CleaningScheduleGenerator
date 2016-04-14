@@ -34,6 +34,10 @@
   <property name="windowTitle">
    <string>settings</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Resources/icon32.png</normaloff>Resources/icon32.png</iconset>
+  </property>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>

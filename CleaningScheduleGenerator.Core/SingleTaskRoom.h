@@ -1,12 +1,15 @@
-#ifndef __SINGLETASKROOM_H__
-#define __SINGLETASKROOM_H__
+#ifdef COMPILE_MYLIBRARY
+#define MYLIBRARY_EXPORT __declspec(dllexport)
+#else
+#define MYLIBRARY_EXPORT __declspec(dllimport)
+#endif
 
 #include "task.h"
 #include "room.h"
 
 using namespace std;
 
-class SingleTaskRoom
+class MYLIBRARY_EXPORT SingleTaskRoom
 {
 public:
 	SingleTaskRoom(Task*, Room*);
@@ -14,5 +17,3 @@ public:
 	Room* room;
 	~SingleTaskRoom();
 };
-
-#endif // !__SINGLETASKROOM_H__

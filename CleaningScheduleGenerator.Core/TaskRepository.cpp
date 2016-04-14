@@ -51,7 +51,7 @@ vector<Task*> TaskRepository::GetAll()
 	sqlite3 *db;
 	char *zErrMsg = 0;
 	int rc;
-	char *sql;
+
 	const char* data = "Callback function called";
 
 	/* Open database */

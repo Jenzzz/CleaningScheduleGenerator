@@ -1,5 +1,8 @@
-#ifndef BOOLEANHELPER_H
-#define BOOLEANHELPER_H
+#ifdef COMPILE_MYLIBRARY
+#define MYLIBRARY_EXPORT __declspec(dllexport)
+#else
+#define MYLIBRARY_EXPORT __declspec(dllimport)
+#endif
 
 #include <string>
 
@@ -13,5 +16,3 @@ bool String2Bool(string s)
 		return false;
 	throw exception("bad string");
 }
-
-#endif // !BOOLEANHELPER_H

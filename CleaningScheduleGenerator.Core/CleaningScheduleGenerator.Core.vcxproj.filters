@@ -101,9 +101,6 @@
     <ClInclude Include="WritePdf.h">
       <Filter>Header Files\io</Filter>
     </ClInclude>
-    <ClInclude Include="readIniFile.h">
-      <Filter>Header Files\io</Filter>
-    </ClInclude>
     <ClInclude Include="WeekSchedule.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -133,12 +130,6 @@
     </ClInclude>
     <ClInclude Include="FilenameHelper.h">
       <Filter>Header Files\Helper</Filter>
-    </ClInclude>
-    <ClInclude Include="inih\cpp\INIReader.h">
-      <Filter>Header Files\io</Filter>
-    </ClInclude>
-    <ClInclude Include="inih\ini.h">
-      <Filter>Header Files\io</Filter>
     </ClInclude>
     <ClInclude Include="DatabaseBase.h">
       <Filter>Header Files</Filter>

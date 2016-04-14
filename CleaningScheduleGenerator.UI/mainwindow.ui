@@ -25,6 +25,10 @@
   <property name="windowTitle">
    <string>Cleaning Schedule Generator</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Resources/icon32.png</normaloff>Resources/icon32.png</iconset>
+  </property>
   <property name="tabShape">
    <enum>QTabWidget::Rounded</enum>
   </property>

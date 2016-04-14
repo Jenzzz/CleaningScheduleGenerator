@@ -1,7 +1,11 @@
-#ifndef DATEHELPER_H
-#define DATEHELPER_H
+#ifdef COMPILE_MYLIBRARY
+#define MYLIBRARY_EXPORT __declspec(dllexport)
+#else
+#define MYLIBRARY_EXPORT __declspec(dllimport)
+#endif
 
 #include <ctime>
+#include <vector>
 
 using namespace std;
 
@@ -117,5 +121,3 @@ static vector<tm> GetMondaysFrom(tm dateTime, unsigned int n = 10)
 
 	return mondays;
 }
-
-#endif DATEHELPER_H
