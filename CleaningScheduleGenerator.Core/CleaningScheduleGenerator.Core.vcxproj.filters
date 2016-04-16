@@ -16,9 +16,6 @@
     <Filter Include="Bin">
       <UniqueIdentifier>{958a5fa1-d9ff-4cfe-893f-637c27f121a4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\io">
-      <UniqueIdentifier>{77e1931f-ca47-40ab-8969-afdb2c1dd362}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\io">
       <UniqueIdentifier>{51d4c8bf-4657-4ff9-aa0c-90013abbf125}</UniqueIdentifier>
     </Filter>
@@ -49,21 +46,21 @@
     <Filter Include="Header Files\Data\Base">
       <UniqueIdentifier>{d5229f68-173f-49a6-a8ac-3f62e36bceea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Data\Repository\io">
+      <UniqueIdentifier>{77e1931f-ca47-40ab-8969-afdb2c1dd362}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="WritePdf.cpp">
-      <Filter>Source Files\io</Filter>
+      <Filter>Source Files\Data\Repository\io</Filter>
     </ClCompile>
     <ClCompile Include="readIniFile.cpp">
-      <Filter>Source Files\io</Filter>
+      <Filter>Source Files\Data\Repository\io</Filter>
     </ClCompile>
     <ClCompile Include="RoomRepository.cpp">
-      <Filter>Source Files\Data\Repository</Filter>
-    </ClCompile>
-    <ClCompile Include="TaskRepository.cpp">
       <Filter>Source Files\Data\Repository</Filter>
     </ClCompile>
     <ClCompile Include="person.cpp">
@@ -85,16 +82,19 @@
       <Filter>Source Files\Business</Filter>
     </ClCompile>
     <ClCompile Include="inih\cpp\INIReader.cpp">
-      <Filter>Source Files\io</Filter>
+      <Filter>Source Files\Data\Repository\io</Filter>
     </ClCompile>
     <ClCompile Include="inih\ini.c">
-      <Filter>Source Files\io</Filter>
+      <Filter>Source Files\Data\Repository\io</Filter>
     </ClCompile>
     <ClCompile Include="DatabaseBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PersonRepository.cpp">
       <Filter>Source Files\Data\Repository</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskRepository.cpp">
+      <Filter>Source Files\Data\Repository\io</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
