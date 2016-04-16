@@ -1,0 +1,14 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/icons">
+        <file alias="16x16_">icons/icon.png</file>
+        <file alias="22x22_">icons/icon.png</file>
+        <file alias="24x24_">icons/icon.png</file>
+        <file alias="32x32_">icons/icon.png</file>
+        <file alias="36x36_">icons/icon.png</file>
+        <file alias="48x48_">icons/icon.png</file>
+        <file alias="64x64_">icons/icon.png</file>
+        <file alias="72x72_">icons/icon.png</file>
+        <file alias="96x96_">icons/icon.png</file>
+        <file alias="128x128_">icons/icon.png</file>
+    </qresource>
+</RCC>
