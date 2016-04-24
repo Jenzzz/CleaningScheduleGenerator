@@ -1,9 +1,5 @@
-#ifdef COMPILE_MYLIBRARY
-#define MYLIBRARY_EXPORT __declspec(dllexport)
-#else
-#define MYLIBRARY_EXPORT __declspec(dllimport)
-#endif
-
+#ifndef __TASKREPOSITORY_H__
+#define __TASKREPOSITORY_H__
 
 #include <vector>
 
@@ -12,7 +8,7 @@
 
 using namespace std;
 
-class MYLIBRARY_EXPORT TaskRepository : DatabaseBase
+class TaskRepository : DatabaseBase
 {
 public:
 	TaskRepository();
@@ -26,3 +22,5 @@ public:
 	//static int my_special_callback(void* param, int count, char **data, char **columns);
 	~TaskRepository();
 };
+
+#endif

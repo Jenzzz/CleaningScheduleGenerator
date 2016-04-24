@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CleaningScheduleGenerator.Core", "CleaningScheduleGenerator.Core\CleaningScheduleGenerator.Core.vcxproj", "{0D1A7A36-88B4-41DF-8147-702ACAD838EE}"
 EndProject
@@ -9,7 +9,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CleaningScheduleGenerator.U
 EndProject
 Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "CleaningScheduleGenerator.Setup", "CleaningScheduleGenerator.Setup\CleaningScheduleGenerator.Setup.isproj", "{70E984A5-C557-401E-A5A9-2972CE8E3909}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CleaningScheduleGenerator.Console", "CleaningScheduleGenerator\CleaningScheduleGenerator.vcxproj", "{217AE33D-39E6-4393-82C1-EEAA46DB99D6}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CleaningScheduleGenerator.Console", "CleaningScheduleGenerator.Console\CleaningScheduleGenerator.Console.vcxproj", "{217AE33D-39E6-4393-82C1-EEAA46DB99D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,24 +25,22 @@ Global
 		SingleImage|x86 = SingleImage|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.CD_ROM|x64.ActiveCfg = Release|x64
-		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.CD_ROM|x64.Build.0 = Release|x64
+		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.CD_ROM|x64.ActiveCfg = Debug|Win32
+		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.CD_ROM|x64.Build.0 = Debug|Win32
 		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.CD_ROM|x86.ActiveCfg = Release|Win32
 		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.CD_ROM|x86.Build.0 = Release|Win32
-		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.Debug|x64.ActiveCfg = Debug|x64
-		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.Debug|x64.Build.0 = Debug|x64
+		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.Debug|x64.ActiveCfg = Debug|Win32
 		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.Debug|x86.ActiveCfg = Debug|Win32
 		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.Debug|x86.Build.0 = Debug|Win32
-		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.DVD-5|x64.ActiveCfg = Debug|x64
-		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.DVD-5|x64.Build.0 = Debug|x64
+		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.DVD-5|x64.ActiveCfg = Debug|Win32
+		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.DVD-5|x64.Build.0 = Debug|Win32
 		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.DVD-5|x86.ActiveCfg = Debug|Win32
 		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.DVD-5|x86.Build.0 = Debug|Win32
-		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.Release|x64.ActiveCfg = Release|x64
-		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.Release|x64.Build.0 = Release|x64
+		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.Release|x64.ActiveCfg = Release|Win32
 		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.Release|x86.ActiveCfg = Release|Win32
 		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.Release|x86.Build.0 = Release|Win32
-		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.SingleImage|x64.ActiveCfg = Release|x64
-		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.SingleImage|x64.Build.0 = Release|x64
+		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.SingleImage|x64.ActiveCfg = Debug|Win32
+		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.SingleImage|x64.Build.0 = Debug|Win32
 		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.SingleImage|x86.ActiveCfg = Release|Win32
 		{0D1A7A36-88B4-41DF-8147-702ACAD838EE}.SingleImage|x86.Build.0 = Release|Win32
 		{B12702AD-ABFB-343A-A199-8E24837244A3}.CD_ROM|x64.ActiveCfg = Release|Win32

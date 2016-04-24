@@ -1,8 +1,5 @@
-#ifdef COMPILE_MYLIBRARY
-#define MYLIBRARY_EXPORT __declspec(dllexport)
-#else
-#define MYLIBRARY_EXPORT __declspec(dllimport)
-#endif
+#ifndef __WEEKSCHEDULE_H__
+#define __WEEKSCHEDULE_H__
 
 #include <vector>
 
@@ -10,7 +7,7 @@
 
 using namespace std;
 
-class MYLIBRARY_EXPORT WeekSchedule
+class WeekSchedule
 {
 public:
 	WeekSchedule();
@@ -18,3 +15,5 @@ public:
 	vector<SingleTaskRoom> TasksForRooms;
 	~WeekSchedule();
 };
+
+#endif

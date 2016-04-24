@@ -1,15 +1,12 @@
-#ifdef COMPILE_MYLIBRARY
-#define MYLIBRARY_EXPORT __declspec(dllexport)
-#else
-#define MYLIBRARY_EXPORT __declspec(dllimport)
-#endif
+#ifndef __TASK_H__
+#define __TASK_H__
 
 #include <ostream>
 #include <string>
 
 using namespace std;
 
-class MYLIBRARY_EXPORT Task
+class Task
 {
 public:
 	Task(int id, string name, string descrption);
@@ -24,3 +21,4 @@ inline MYLIBRARY_EXPORT ostream& operator<<(ostream &os, const Task &t)
 	return os << t.Name.c_str();
 }
 
+#endif

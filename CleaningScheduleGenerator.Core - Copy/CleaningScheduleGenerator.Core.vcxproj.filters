@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Bin">
+      <UniqueIdentifier>{958a5fa1-d9ff-4cfe-893f-637c27f121a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\io">
+      <UniqueIdentifier>{51d4c8bf-4657-4ff9-aa0c-90013abbf125}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data">
+      <UniqueIdentifier>{77af8b43-0e57-4132-8d44-3b683bfbb357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data">
+      <UniqueIdentifier>{05ddd837-9e5a-4676-b00e-14a7c2684189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data\Repository">
+      <UniqueIdentifier>{e1e6df70-165a-4df3-b351-b791ca1e9076}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data\Repository">
+      <UniqueIdentifier>{8148db0f-d303-4d0b-baef-f9601c1c8889}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Business">
+      <UniqueIdentifier>{9a8776f8-7b44-48cc-83a1-3c2912745bea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Business">
+      <UniqueIdentifier>{4c8fd061-78fa-47d7-8f19-41efb4a29516}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Helper">
+      <UniqueIdentifier>{7411ae18-5411-4904-8a27-f80fb459f7a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data\Base">
+      <UniqueIdentifier>{d26c2b63-d3ff-460e-8f78-9ec5f570bd67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data\Base">
+      <UniqueIdentifier>{d5229f68-173f-49a6-a8ac-3f62e36bceea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data\Repository\io">
+      <UniqueIdentifier>{77e1931f-ca47-40ab-8969-afdb2c1dd362}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WritePdf.cpp">
+      <Filter>Source Files\Data\Repository\io</Filter>
+    </ClCompile>
+    <ClCompile Include="readIniFile.cpp">
+      <Filter>Source Files\Data\Repository\io</Filter>
+    </ClCompile>
+    <ClCompile Include="RoomRepository.cpp">
+      <Filter>Source Files\Data\Repository</Filter>
+    </ClCompile>
+    <ClCompile Include="person.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="task.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="room.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="CleaningSchedule.cpp">
+      <Filter>Source Files\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleTaskRoom.cpp">
+      <Filter>Source Files\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="WeekSchedule.cpp">
+      <Filter>Source Files\Business</Filter>
+    </ClCompile>
+    <ClCompile Include="inih\cpp\INIReader.cpp">
+      <Filter>Source Files\Data\Repository\io</Filter>
+    </ClCompile>
+    <ClCompile Include="inih\ini.c">
+      <Filter>Source Files\Data\Repository\io</Filter>
+    </ClCompile>
+    <ClCompile Include="DatabaseBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PersonRepository.cpp">
+      <Filter>Source Files\Data\Repository</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskRepository.cpp">
+      <Filter>Source Files\Data\Repository\io</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WritePdf.h">
+      <Filter>Header Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="WeekSchedule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CleaningSchedule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleTaskRoom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomRepository.h">
+      <Filter>Header Files\Data\Repository</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskRepository.h">
+      <Filter>Header Files\Data\Repository</Filter>
+    </ClInclude>
+    <ClInclude Include="person.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="room.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="task.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="dateHelper.h">
+      <Filter>Header Files\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="FilenameHelper.h">
+      <Filter>Header Files\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="DatabaseBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PersonRepository.h">
+      <Filter>Header Files\Data\Repository</Filter>
+    </ClInclude>
+    <ClInclude Include="BooleanHelper.h">
+      <Filter>Header Files\Helper</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

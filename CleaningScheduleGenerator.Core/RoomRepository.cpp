@@ -62,33 +62,33 @@ vector<Room*> RoomRepository::GetAll()
 {
 	rooms.clear();
 
-	sqlite3 *db;
-	char *zErrMsg = 0;
-	int rc;
-	const char* data = "Callback function called";
+	//sqlite3 *db;
+	//char *zErrMsg = 0;
+	//int rc;
+	//const char* data = "Callback function called";
 
-	/* Open database */
-	rc = sqlite3_open("cleaningschedule.db", &db);
-	if (rc) {
-		fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
-		exit(0);
-	}
-	else {
-		fprintf(stderr, "Opened database successfully\n");
-	}
-	/* Create SQL statement */
-	char* query = "SELECT r.Id, a.Name as Habitant, a.Id as HabitantId, a.IsNestor as HabitantIsNestor, c.Name as Overseer, c.Id as OverseerId, c.IsNestor as OverseerIsNestor from Rooms r INNER JOIN Habitants a ON r.Habitant = a.Id INNER JOIN Habitants c ON r.Overseer = c.Id; ";
-		
-	/* Execute SQL statement */
-	rc = sqlite3_exec(db, query, callback, &data, &zErrMsg);
-	if (rc != SQLITE_OK) {
-		fprintf(stderr, "SQL error: %s\n", zErrMsg);
-		sqlite3_free(zErrMsg);
-	}
-	else {
-		fprintf(stdout, "Operation done successfully\n");
-	}
-	sqlite3_close(db);
+	///* Open database */
+	//rc = sqlite3_open("cleaningschedule.db", &db);
+	//if (rc) {
+	//	fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+	//	exit(0);
+	//}
+	//else {
+	//	fprintf(stderr, "Opened database successfully\n");
+	//}
+	///* Create SQL statement */
+	//char* query = "SELECT r.Id, a.Name as Habitant, a.Id as HabitantId, a.IsNestor as HabitantIsNestor, c.Name as Overseer, c.Id as OverseerId, c.IsNestor as OverseerIsNestor from Rooms r INNER JOIN Habitants a ON r.Habitant = a.Id INNER JOIN Habitants c ON r.Overseer = c.Id; ";
+	//	
+	///* Execute SQL statement */
+	//rc = sqlite3_exec(db, query, callback, &data, &zErrMsg);
+	//if (rc != SQLITE_OK) {
+	//	fprintf(stderr, "SQL error: %s\n", zErrMsg);
+	//	sqlite3_free(zErrMsg);
+	//}
+	//else {
+	//	fprintf(stdout, "Operation done successfully\n");
+	//}
+	//sqlite3_close(db);
 
 
 	//ReadIniFile *readIniFile = new ReadIniFile("config.ini");
